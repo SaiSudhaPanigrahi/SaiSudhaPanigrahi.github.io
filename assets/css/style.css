@@ -239,6 +239,12 @@ html {
   background-color: #fff;
   z-index: 2;
   box-shadow: 0 2px 2px rgb(230, 230, 230);
+   background-color: #1a1a2e;  /* Dark navy blue (visibly distinct from black) */
+  min-height: 80px;           /* Taller navbar */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);  /* Stronger shadow to separate */
+
 }
 
 /* Dark Mode toggle switch button */
@@ -1092,3 +1098,26 @@ outline: none;
     transform: scale(0) rotateZ(-90deg);
   }
 }
+
+.navbar-brand {
+  font-size: 3rem;           /* Bigger brand name */
+  letter-spacing: 2px;       /* More spaced letters */
+  font-weight: 900;
+  color: #ffffff !important;
+
+}
+.navbar-nav .nav-link {
+  font-size: 1.3rem;         /* Larger text */
+  font-weight: 900;          /* Extra bold */
+  letter-spacing: 2px;       /* More spacing */
+  color: #ffffff !important; /* High contrast on dark backgrounds */
+  text-transform: uppercase;
+}
+/*.navbar-brand {
+  font-size: 2.2rem;         *//* Bigger text *//*
+  font-weight: 900;          *//* Heaviest font weight *//*
+  color: #ffffff !important; *//* Bright white for contrast *//*
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); *//* Extra visibility *//*
+}*/
+
