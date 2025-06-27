@@ -1138,5 +1138,33 @@ html[data-theme="light"] .navbar-brand {
 html[data-theme="light"] .navbar-brand:hover {
   color: rgb(106, 0, 187) !important;
 }*/
+/* Resume button */
+.rounded-social-buttons .social-button.resume {
+  background: #6a00bb;
+  color: white;
+}
+
+.rounded-social-buttons .social-button.resume:hover {
+  background: #bb86fc;
+}
+
+/* Gmail button */
+.rounded-social-buttons .social-button.gmail {
+  background: #D44638; /* Gmail red */
+  color: white;
+}
+
+.rounded-social-buttons .social-button.gmail:hover {
+  background: #e56756;
+}
+
+/* LeetCode: already uses inline <img> */
+.rounded-social-buttons .social-button.leetcode {
+  background: white;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
