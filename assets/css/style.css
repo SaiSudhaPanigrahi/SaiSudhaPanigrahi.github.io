@@ -1100,16 +1100,16 @@ outline: none;
 }
 
 .navbar-brand {
-  font-size: 3rem;           /* Bigger brand name */
-  letter-spacing: 2px;       /* More spaced letters */
+  font-size: 2.3rem;           /* Bigger brand name */
+  letter-spacing: 1.5px;       /* More spaced letters */
   font-weight: 900;
   color: #ffffff !important;
 
 }
 .navbar-nav .nav-link {
-  font-size: 1.3rem;         /* Larger text */
+  font-size: 1.0rem;         /* Larger text */
   font-weight: 900;          /* Extra bold */
-  letter-spacing: 2px;       /* More spacing */
+  letter-spacing: 1.5px;       /* More spacing */
   color: #ffffff !important; /* High contrast on dark backgrounds */
   text-transform: uppercase;
 }
