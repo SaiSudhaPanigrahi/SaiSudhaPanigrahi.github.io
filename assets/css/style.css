@@ -288,10 +288,15 @@ html {
 }
 /* end of dark mode toggle switch button */
 
-html {
+/*html {
   background-color: #f6f6f6;
   transition: background-color .3s;
-}
+}*/
+/*
+html {
+  background-color: var(--bg);
+  transition: background-color 0.3s;
+}*/
 
 html[light-mode="dark"] {
   background-color: #141516;
@@ -435,7 +440,7 @@ color: #ffffff !important;
 }
 
 /* navbar hover for light mode */
-html[light-mode="light"] .nav-link{
+/*html[light-mode="light"] .nav-link{
   color: #000000 !important;
 }
 html[light-mode="light"] .nav-link:hover{
@@ -443,7 +448,7 @@ html[light-mode="light"] .nav-link:hover{
 }
 html[light-mode="light"] .navbar-brand:hover{
   color: #000000 !important;
-}
+}*/
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
@@ -1120,4 +1125,18 @@ outline: none;
   letter-spacing: 2px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); *//* Extra visibility *//*
 }*/
+
+/*html[data-theme="light"] .nav-link {
+  color: #000000 !important;
+}
+html[data-theme="light"] .nav-link:hover {
+  color: rgb(106, 0, 187) !important;
+}
+html[data-theme="light"] .navbar-brand {
+  color: #000000 !important;
+}
+html[data-theme="light"] .navbar-brand:hover {
+  color: rgb(106, 0, 187) !important;
+}*/
+
 
