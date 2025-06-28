@@ -55,22 +55,14 @@
     color: #00e6e6;
   }
 
-  .social-button img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* Ensures visibility on dark backgrounds */
-}
-
-
   /* Fixed CSS for horizontal social icons */
   .rounded-social-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin: 1px 0;
+    gap: 15px;
+    margin: 20px 0;
     flex-wrap: wrap;
   }
 
@@ -80,7 +72,7 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    border-radius: 70%;
+    border-radius: 50%;
     text-decoration: none;
     transition: all 0.3s ease;
     color: white;
@@ -91,6 +83,7 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     text-decoration: none;
+    color: white;
   }
 
   .social-button.resume {
@@ -113,34 +106,23 @@
     background: linear-gradient(45deg, #ea4335 0%, #d33b2c 100%);
   }
 
-  .social-button img {
-    filter: brightness(0) invert(1);
-  }
-  .social-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #333; /* fallback color */
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-
   /* Responsive design */
   @media (max-width: 768px) {
     .rounded-social-buttons {
-      gap: 1px;
+      gap: 10px;
     }
 
-<!--    .social-button {
-      width: 90px;
-      height: 90px;
-      font-size: 40px;
-    }-->
+    .social-button {
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+
+
+
+
   }
+
 </style>
 
 
@@ -187,35 +169,84 @@
 </span>
 
                 <div>
+
+                    <!-- Updated Social Icons HTML -->
+<!--<div class="rounded-social-buttons">-->
+
+<!--  &lt;!&ndash; Resume &ndash;&gt;-->
+<!--  <a class="social-button resume" href="/path/to/your_resume.pdf" download title="Download Resume">-->
+<!--    <i class="fas fa-file-alt"></i>-->
+<!--  </a>-->
+<!--      &lt;!&ndash; GitHub &ndash;&gt;-->
+<!--    <a class="social-button github" href="https://github.com/YourUsername" title="GitHub" target="_blank">-->
+<!--  <i class="fab fa-github"></i>-->
+<!--</a>-->
+
+
+
+<!--<a class="social-button linkedin" href="https://linkedin.com/in/YourUsername" title="LinkedIn" target="_blank">-->
+<!--  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Logo" style="width: 28px; height: 28px;" />-->
+<!--</a>-->
+
+
+
+<!--  &lt;!&ndash; LeetCode &ndash;&gt;-->
+<!--    <a class="social-button leetcode" href="https://leetcode.com/YourUsername/" title="LeetCode" target="_blank">-->
+<!--  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode Logo" style="width: 28px; height: 28px;" />-->
+<!--</a>-->
+
+
+<!--  &lt;!&ndash; Gmail &ndash;&gt;-->
+<!--  <a class="social-button gmail" href="mailto:your.email@gmail.com" title="Email Me">-->
+<!--    <i class="fas fa-envelope"></i>-->
+<!--  </a>-->
+
+<!--</div>-->
+
                     <div class="rounded-social-buttons">
 
   <!-- Resume -->
-  <a class="social-button resume" href="/path/to/your_resume.pdf" download title="Download Resume">
-    <i class="fas fa-file-alt"></i> <!-- Document icon -->
-  </a>
+  <div class="icon-with-label">
+    <a class="social-button resume" href="/path/to/your_resume.pdf" download title="Download Resume">
+      <i class="fas fa-file-alt"></i>
+    </a>
+    <span class="icon-label">Resume</span>
+  </div>
 
   <!-- GitHub -->
-  <a class="social-button github" href="https://github.com/YourUsername" title="GitHub" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>
+  <div class="icon-with-label">
+    <a class="social-button github" href="https://github.com/YourUsername" title="GitHub" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <span class="icon-label">GitHub</span>
+  </div>
 
   <!-- LinkedIn -->
-  <a class="social-button linkedin" href="https://linkedin.com/in/YourUsername" title="LinkedIn" target="_blank">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
+  <div class="icon-with-label">
+    <a class="social-button linkedin" href="https://linkedin.com/in/YourUsername" title="LinkedIn" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Logo" />
+    </a>
+    <span class="icon-label">LinkedIn</span>
+  </div>
 
   <!-- LeetCode -->
-  <a class="social-button leetcode" href="https://leetcode.com/YourUsername/" title="LeetCode" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-         alt="LeetCode" style="width: 28px; height: 28px; margin-top: 5px;">
-  </a>
+  <div class="icon-with-label">
+    <a class="social-button leetcode" href="https://leetcode.com/YourUsername/" title="LeetCode" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode Logo" />
+    </a>
+    <span class="icon-label">LeetCode</span>
+  </div>
 
   <!-- Gmail -->
-  <a class="social-button gmail" href="mailto:your.email@gmail.com" title="Email Me">
-    <i class="fas fa-envelope"></i>
-  </a>
+  <div class="icon-with-label">
+    <a class="social-button gmail" href="mailto:your.email@gmail.com" title="Email Me">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <span class="icon-label">Email</span>
+  </div>
 
 </div>
+
 
                 </div>
             </div>

@@ -286,17 +286,7 @@ html {
   transition: all 0.9s;
   background-color: #bb86fc;
 }
-/* end of dark mode toggle switch button */
 
-/*html {
-  background-color: #f6f6f6;
-  transition: background-color .3s;
-}*/
-/*
-html {
-  background-color: var(--bg);
-  transition: background-color 0.3s;
-}*/
 
 html[light-mode="dark"] {
   background-color: #141516;
@@ -438,17 +428,6 @@ color: #ffffff !important;
       display: none;
   }
 }
-
-/* navbar hover for light mode */
-/*html[light-mode="light"] .nav-link{
-  color: #000000 !important;
-}
-html[light-mode="light"] .nav-link:hover{
-  color: 	rgb(106, 0, 187) !important;
-}
-html[light-mode="light"] .navbar-brand:hover{
-  color: #000000 !important;
-}*/
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
@@ -1118,26 +1097,7 @@ outline: none;
   color: #ffffff !important; /* High contrast on dark backgrounds */
   text-transform: uppercase;
 }
-/*.navbar-brand {
-  font-size: 2.2rem;         *//* Bigger text *//*
-  font-weight: 900;          *//* Heaviest font weight *//*
-  color: #ffffff !important; *//* Bright white for contrast *//*
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); *//* Extra visibility *//*
-}*/
 
-/*html[data-theme="light"] .nav-link {
-  color: #000000 !important;
-}
-html[data-theme="light"] .nav-link:hover {
-  color: rgb(106, 0, 187) !important;
-}
-html[data-theme="light"] .navbar-brand {
-  color: #000000 !important;
-}
-html[data-theme="light"] .navbar-brand:hover {
-  color: rgb(106, 0, 187) !important;
-}*/
 /* Resume button */
 .rounded-social-buttons .social-button.resume {
   background: #6a00bb;
@@ -1166,5 +1126,82 @@ html[data-theme="light"] .navbar-brand:hover {
   align-items: center;
   justify-content: center;
 }
+.social-button img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+
+}
+
+.social-button.github {
+  background: #2b2a2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-button.leetcode img {
+  filter: none !important; /* override global img filter */
+}
 
 
+.rounded-social-buttons a img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.rounded-social-buttons a:hover img {
+  transform: scale(1.15);
+}
+
+.social-button.github img {
+  filter: none !important;
+}
+.social-button.github i.fab.fa-github {
+  filter: none !important;
+  color: white !important;
+  font-size: 28px;
+}
+.rounded-social-buttons .social-button.github i.fab.fa-github {
+  color: white !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.rounded-social-buttons .social-button i {
+  font-size: 28px;
+}
+
+.rounded-social-buttons .social-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+}
+.icon-with-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.icon-label {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.rounded-social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rounded-social-buttons .social-button i,
+.rounded-social-buttons .social-button img {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+}
