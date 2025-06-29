@@ -1205,3 +1205,34 @@ outline: none;
   width: 28px;
   height: 28px;
 }
+
+.icon-with-label .social-button {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff; /* or your theme color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow like the first set */
+  transition: transform 0.3s ease;
+}
+
+.icon-with-label .social-button:hover {
+  transform: translateY(-5px);
+}
+
+.icon-with-label img,
+.icon-with-label i {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-label {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
