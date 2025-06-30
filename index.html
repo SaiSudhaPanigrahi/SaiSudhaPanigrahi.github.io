@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en" light-mode="dark">
 <head>
@@ -48,8 +47,42 @@
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <!-- NEW professional font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Professional font pair -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 
   <style>
+
+    :root{
+  --accent: #00e6e6;   /* matches the animated-text color */
+}
+
+/* ===== Global font stack ===== */
+body{
+  font-family: 'Lato', 'Poppins', sans-serif;   /* body copy */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* Headings & prominent text */
+h1, h2, h3, h4,
+.header, .skill-badge, .icon-label{
+  font-family: 'Montserrat', 'Lato', sans-serif;
+  font-weight: 600;
+  color: var(--accent);      /* NEW — cyan accent */
+}
+
+.skill-badge{
+  /* existing badge styles … */
+  color: var(--accent);      /* NEW text color */
+}
+
+
+
     .animated-text {
       font-family: 'Fira Code', monospace;
       font-weight: 500;
@@ -66,6 +99,7 @@
       gap: 15px;
       margin: 20px 0;
       flex-wrap: wrap;
+      box-shadow:0 4px 10px rgba(0,0,0,.25);
     }
 
     .social-button {
@@ -79,6 +113,7 @@
       transition: all 0.3s ease;
       color: white;
       font-size: 20px;
+      box-shadow:0 4px 10px rgba(0,0,0,.25);
     }
 
     .social-button:hover {
@@ -86,6 +121,7 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       text-decoration: none;
       color: white;
+      box-shadow:0 4px 10px rgba(0,0,0,.25);
     }
 
     .social-button.resume   { background: linear-gradient(45deg,#667eea 0%,#764ba2 100%); }
@@ -127,7 +163,7 @@
   <center>
     <!-- Home Section -->
     <div class="text col-sm-6" style="margin-top: 140px;">
-      Hi <span class="wave"><img src="assets/images/Hand.gif" width="35px" /></span>&nbsp;, I'm <span class="header">John Doe</span>
+      Hi <span class="wave"><img src="assets/images/Hand.gif" width="35px" /></span>&nbsp;, I'm <span class="header">Sai Sudha Panigrahi</span>
       <div class="center">
         <div>
           <img src="assets/images/passport_3.jpeg" alt="" class="rounded-circle" height="200" width="200">
@@ -306,6 +342,102 @@
   </div>
 </section>
 
+  <!-- ========= 😊 ABOUT ME (clean & cheerful—no aviation metaphors) ========= -->
+<section id="about-me9" class="container mt-5 pt-5">
+  <div class="row align-items-center">
+
+    <!-- Photo -->
+    <div class="col-md-4 text-center mb-4 mb-md-0">
+      <img src="assets/images/usc_SSP.jpeg"
+           class="img-fluid rounded-circle"
+           alt="Sai Sudha Panigrahi" width="250" height="250">
+    </div>
+
+    <!-- Text -->
+    <div class="col-md-8">
+      <h2 class="text-center text-md-left">About Me</h2>
+
+      <p class="lead mt-3">
+        Hi, I’m <strong>Sai Sudha Panigrahi</strong>—an <strong>M.S. Computer Science student at USC</strong> and
+        an <strong>AI Engineer Intern at Pasadena Digital</strong>. My day-to-day revolves around building
+        practical <strong>computer vision</strong>, <strong>NLP</strong>, and <strong>LLM</strong> pipelines that
+        improve aviation safety.
+      </p>
+
+      <p class="lead">
+        I bring <strong>3 + years of professional experience</strong> from
+        <strong>D.E. Shaw (Arcesium)</strong>, <strong>LOCAD</strong>, and <strong>Oracle</strong>,
+        where I led backend automation, cloud integrations, and data-driven features that reached production users.
+      </p>
+
+      <p class="lead">
+        Beyond code, I enjoy sharing what I learn, collaborating on open-source,
+        and tackling new tech challenges with energy and curiosity.
+        Let’s connect and create something impactful together!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="container mt-5 pt-3">
+  <h2 class="text-center mb-4">Skills</h2>
+
+  <!-- Languages & Frameworks -->
+  <h5 class="text-muted">Languages&nbsp;&amp;&nbsp;Frameworks</h5>
+  <div>
+    <span class="skill-badge">Python</span>
+    <span class="skill-badge">Java</span>
+    <span class="skill-badge">C/C++</span>
+    <span class="skill-badge">JavaScript</span>
+    <span class="skill-badge">SQL / NoSQL</span>
+    <span class="skill-badge">HTML &amp; CSS</span>
+    <span class="skill-badge">FastAPI</span>
+    <span class="skill-badge">Django</span>
+    <span class="skill-badge">ReactJS</span>
+  </div>
+
+  <!-- AI / ML -->
+  <h5 class="text-muted mt-3">AI&nbsp;/&nbsp;ML&nbsp;&amp;&nbsp;Data</h5>
+  <div>
+    <span class="skill-badge">TensorFlow</span>
+    <span class="skill-badge">PyTorch</span>
+    <span class="skill-badge">scikit-learn</span>
+    <span class="skill-badge">Pandas</span>
+    <span class="skill-badge">NumPy</span>
+    <span class="skill-badge">LLMs</span>
+    <span class="skill-badge">NLP</span>
+    <span class="skill-badge">Deep Learning</span>
+  </div>
+
+  <!-- DevOps & Cloud -->
+  <h5 class="text-muted mt-3">DevOps&nbsp;&amp;&nbsp;Cloud</h5>
+  <div>
+    <span class="skill-badge">AWS</span>
+    <span class="skill-badge">Docker</span>
+    <span class="skill-badge">Kubernetes</span>
+    <span class="skill-badge">Linux / Unix</span>
+    <span class="skill-badge">Bash / Shell</span>
+    <span class="skill-badge">CI/CD</span>
+    <span class="skill-badge">Git</span>
+    <span class="skill-badge">Microservices</span>
+  </div>
+
+  <!-- Tools & Methodologies -->
+  <h5 class="text-muted mt-3">Tools&nbsp;&amp;&nbsp;Methodologies</h5>
+  <div>
+    <span class="skill-badge">REST APIs</span>
+    <span class="skill-badge">Agile / Scrum</span>
+    <span class="skill-badge">JIRA</span>
+    <span class="skill-badge">Visual Studio</span>
+    <span class="skill-badge">Debugging</span>
+    <span class="skill-badge">Troubleshooting</span>
+    <span class="skill-badge">Statistics</span>
+    <span class="skill-badge">Mathematics</span>
+  </div>
+</section>
+<!-- ===== END SKILLS ===== -->
+
 
   <br><br><br>
 
@@ -366,4 +498,3 @@
 
 </body>
 </html>
-```
