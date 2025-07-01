@@ -77,9 +77,25 @@ h1, h2, h3, h4,
 }
 
 .skill-badge{
-  /* existing badge styles … */
-  color: var(--accent);      /* NEW text color */
+  display:inline-block;
+  padding:6px 18px;
+  margin:6px;
+  font-size:0.9rem;
+  font-weight:500;
+
+  background:var(--accent);     /* turquoise pill */
+  color:#000;                   /* ← white text */
+
+  border-radius:9999px;
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+  white-space:nowrap;
+  transition:transform .2s ease;
 }
+
+.skill-badge:hover{
+  transform:translateY(-2px);
+}
+
 
 
 
@@ -136,8 +152,24 @@ h1, h2, h3, h4,
       .social-button          { width: 45px; height: 45px; font-size: 18px; }
     }
 
-    #home { position: relative; height: 100vh; overflow: hidden; }
-    #vanta-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+<!--    #home { position: relative; height: 100vh; overflow: hidden; }-->
+<!--    #vanta-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }-->
+
+    #vanta-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* allow #home to grow with content instead of locking at 100vh */
+#home {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
   </style>
 
   <!-- Vanta.js dependencies -->
@@ -146,6 +178,8 @@ h1, h2, h3, h4,
 </head>
 
 <body class="no-scroll-preload">
+
+<div id="vanta-bg"></div>
   <!-- loader -->
   <div class="loader-container">
     <div class="atom">
@@ -156,7 +190,7 @@ h1, h2, h3, h4,
   </div>
 
   <div id="home">
-    <div id="vanta-bg"></div>
+<!--    <div id="vanta-bg"></div>-->
     <section class="center"></section>
   </div>
 
@@ -223,161 +257,37 @@ h1, h2, h3, h4,
     </div>
   </center>
 
-  <!-- About sections (unchanged) ... -->
-  <!-- ... your existing About Me sections remain here ... -->
-      <!-- About Me Section -->
 <section id="about" class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 text-center">
-      <h2>About Me</h2>
-      <p class="lead mt-3">
-        I'm a passionate developer with interests in full-stack web development, cloud computing, and AI. I enjoy turning ideas into scalable and impactful solutions.
-        I'm currently pursuing my MSCS at USC and building open-source projects that matter. 🚀
-      </p>
-    </div>
-  </div>
-</section>
-
-    <section id="about2" class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-10 text-center">
-      <h2>About Me</h2>
-      <p class="lead mt-3">
-        Hi, I'm <strong>Sai Sudha Panigrahi</strong> — a passionate Software Engineer with 3 years of industry experience and a Master's in Computer Science (AI focus) from the <strong>University of Southern California (USC)</strong>. I specialize in developing scalable backend systems, AI-powered solutions, and intelligent automation tools.
-      </p>
-      <p class="lead">
-        From building order forecasting modules at LOCAD and automating financial systems at D.E. Shaw (Arcesium) to enhancing cloud infrastructure at Oracle, I bring deep expertise in Python, SQL, REST APIs, and cloud-native technologies like AWS and Docker. My research in AI-driven chatbots and LLM-based Text-to-SQL systems reflects my commitment to innovation at the intersection of software engineering and artificial intelligence.
-      </p>
-      <p class="lead">
-        I'm currently seeking Summer '25 internship opportunities to contribute to impactful teams solving real-world problems with elegant and scalable solutions.
-      </p>
-    </div>
-  </div>
-</section>
-
-    <section id="about3" class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-10 text-center">
-      <h2>About Me</h2>
-      <p class="lead mt-3">
-        👋 Hi, I’m a Master’s in Computer Science candidate at the <strong>University of Southern California (USC)</strong>, with 3+ years of professional experience as a Software Engineer. I’ve built systems that drive efficiency, reduce manual effort, and solve real-world challenges at scale.
-      </p>
-      <p class="lead">
-        🔧 <strong>Technical Skills & Expertise</strong><br/>
-        — <strong>Backend Development</strong>: Python, Java, C/C++, SQL/NoSQL, REST APIs<br/>
-        — <strong>Full-Stack Development</strong>: HTML/CSS, JavaScript, React.js, Django, Spring Boot<br/>
-        — <strong>Cloud & DevOps</strong>: AWS, Docker, Kubernetes — building robust, distributed cloud systems
-      </p>
-      <p class="lead">
-        🤖 <strong>AI/ML Experience</strong><br/>
-        Proficient in <strong>TensorFlow, PyTorch, NLP</strong>, and deep learning with hands-on experience building AI-powered chatbots, intent classifiers, and predictive analytics solutions. <br/>
-        I've also published research in <strong>SPRINGER</strong> and <strong>IEEE</strong> on COVID-19 modeling and road safety using deep learning.
-      </p>
-      <p class="lead">
-        🚀 I thrive on solving complex problems, learning continuously, and contributing to tech that matters. Currently seeking a <strong>Summer '25 internship</strong> where I can build, innovate, and make impact.
-      </p>
-    </div>
-  </div>
-</section>
-
-    <section id="about4" class="container mt-5 pt-5">
   <div class="row align-items-center">
-    <!-- Left side: Image -->
-    <div class="col-md-4 text-center mb-4 mb-md-0">
-      <img src="assets/images/usc_SSP.jpeg" class="img-fluid rounded-circle" alt="Sai Sudha Panigrahi" width="250" height="250">
-    </div>
-
-    <!-- Right side: Text -->
-    <div class="col-md-8">
-      <h2 class="text-center text-md-left">About Me</h2>
-      <p class="lead mt-3">
-        Hi, I'm <strong>Sai Sudha Panigrahi</strong> — a Software Engineer with 3+ years of industry experience and a Master’s in Computer Science (AI-focused) from the <strong>University of Southern California (USC)</strong>.
-      </p>
-      <p class="lead">
-        I specialize in <strong>backend development, cloud infrastructure, and AI-powered systems</strong>. My recent work at <strong>D.E. Shaw (Arcesium)</strong> focused on building scalable automation frameworks, while my time at <strong>Oracle</strong> involved enhancing cloud workflows with tools like <strong>AWS</strong>, <strong>Docker</strong>, and <strong>Bash scripting</strong>.
-      </p>
-      <p class="lead">
-        I'm skilled in <strong>Python, C++, Java, SQL</strong>, and experienced with modern technologies including <strong>REST APIs</strong>, <strong>CI/CD</strong>, <strong>Linux/Unix</strong>, and <strong>distributed systems</strong>.
-      </p>
-      <p class="lead">
-        I’ve also contributed to AI/ML research, including projects on <strong>LLM-based Text-to-SQL translation</strong> and <strong>FAQ chatbots using NLP and Deep Learning</strong>, with publications in <strong>SPRINGER</strong> and <strong>IEEE</strong>.
-      </p>
-      <p class="lead">
-        I'm currently seeking <strong>Fall 2025 co-op</strong and <strong>full-time software engineering opportunities starting in 2026</strong>, where I can bring impactful solutions to life.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- NEW About Me Section -->
-<section id="about-pdg" class="container mt-5 pt-5">
-  <div class="row align-items-center">
-    <div class="col-md-4 text-center mb-4 mb-md-0">
-      <img src="assets/images/usc_SSP.jpeg" class="img-fluid rounded-circle" alt="Sai Sudha Panigrahi" width="250" height="250">
-    </div>
-
-    <div class="col-md-8">
-      <h2 class="text-center text-md-left">About Me</h2>
-
-      <p class="lead mt-3">
-        👋 Hi, I’m <strong>Sai Sudha Panigrahi</strong>—a passionate <strong>AI Engineer Intern at Pasadena Digital</strong> and a Master’s student in Computer Science (AI focus) at the <strong>University of Southern California (USC)</strong>. My sweet spot is the 70-30 split between <strong>NLP research</strong> and <strong>full-stack engineering</strong>, turning raw data—and sometimes noisy radio chatter—into real-time, actionable insights.
-      </p>
-
-      <p class="lead">
-        🚦 <strong>Current Mission:</strong> Building a Python&nbsp;3.12 NLP pipeline that listens to live airport ground-control audio, splits left- and right-ear channels, runs Whisper models in streaming mode, and hands the transcript off to lightweight LLM agents for “digital co-pilot” instructions—all while keeping the front-end snappy for demo day on Wednesday.
-      </p>
-
-      <p class="lead">
-        🔬 I’m experimenting with everything from <strong>Roboflow</strong> data labeling to chunk-wise model inference (small → medium → large) and crafting JSON schemas that LLMs can digest in the background. Each sprint is an adventure in balancing bleeding-edge tech with production pragmatism—perfect interview story fuel!
-      </p>
-
-      <p class="lead">
-        🌐 Previously, I’ve <strong>cleaned legacy codebases</strong>, untangled unversioned files, and optimized view layers to keep products shipping. Whether it’s trimming dead comments, adding smart padding for better UX, or spinning up Flask/Streamlit prototypes when Colab falls short—I’m all about momentum and measurable impact.
-      </p>
-
-      <p class="lead">
-        🚀 I thrive on <strong>story-worthy challenges</strong>: scaling systems, wrangling radio noise, or hunting for the perfect tech stack. Let’s connect if you’re into building ambitious AI products, swapping war stories, or just geeking out over the future of intelligent aviation tech!
-      </p>
-    </div>
-  </div>
-</section>
-
-  <!-- ========= 😊 ABOUT ME (clean & cheerful—no aviation metaphors) ========= -->
-<section id="about-me9" class="container mt-5 pt-5">
-  <div class="row align-items-center">
-
-    <!-- Photo -->
     <div class="col-md-4 text-center mb-4 mb-md-0">
       <img src="assets/images/usc_SSP.jpeg"
            class="img-fluid rounded-circle"
-           alt="Sai Sudha Panigrahi" width="250" height="250">
+           alt="Sai Sudha Panigrahi" width="350" height="350">
     </div>
 
-    <!-- Text -->
     <div class="col-md-8">
       <h2 class="text-center text-md-left">About Me</h2>
 
       <p class="lead mt-3">
-        Hi, I’m <strong>Sai Sudha Panigrahi</strong>—an <strong>M.S. Computer Science student at USC</strong> and
-        an <strong>AI Engineer Intern at Pasadena Digital</strong>. My day-to-day revolves around building
-        practical <strong>computer vision</strong>, <strong>NLP</strong>, and <strong>LLM</strong> pipelines that
-        improve aviation safety.
+        I’m currently pursuing a Master of Science in Computer Science, focused on AI, at the University of Southern California. Alongside my studies, I work as an AI Engineer Intern at Pasadena Digital, where I design and deploy computer-vision, NLP, and LLM pipelines to enhance aviation safety.
       </p>
 
       <p class="lead">
-        I bring <strong>3 + years of professional experience</strong> from
-        <strong>D.E. Shaw (Arcesium)</strong>, <strong>LOCAD</strong>, and <strong>Oracle</strong>,
-        where I led backend automation, cloud integrations, and data-driven features that reached production users.
+        Over the past three years, I’ve held full-time engineering roles at D.E. Shaw &amp; Co. (Arcesium), LOCAD, and Oracle. I specialize in designing scalable backend systems, AI-powered solutions, and intelligent automation tools. I enjoy building full-stack applications, leveraging cloud platforms, and integrating AI to transform concepts into reliable, impactful software—all while choosing the right technologies for performance, reliability, and maintainability.
       </p>
 
       <p class="lead">
-        Beyond code, I enjoy sharing what I learn, collaborating on open-source,
-        and tackling new tech challenges with energy and curiosity.
-        Let’s connect and create something impactful together!
+        My research has resulted in publications on differential-evolution parameter estimation for epidemiological models (Springer, Studies in Computational Intelligence) and deep-learning-based road-safety systems (IEEE). I’ve also contributed to Text-to-SQL translation and FAQ bot projects using NLP and deep learning, turning cutting-edge research into user-facing tools.
+      </p>
+
+      <p class="lead">
+        I’m seeking Fall ’25 co-op positions and full-time opportunities starting in 2026—if your team is tackling real-world challenges with code and creativity, let’s talk!
       </p>
     </div>
   </div>
 </section>
+
+
 
 <!-- ===== SKILLS ===== -->
 <section id="skills" class="container mt-5 pt-3">
@@ -475,7 +385,25 @@ h1, h2, h3, h4,
       spacing: 14.00,
       speed: 10.0
     });
-  </script>
+
+<!--<script src="vanta.birds.min.js"></script>-->
+<!--<script>-->
+<!--VANTA.BIRDS({-->
+<!--  el: "#your-element-selector",-->
+<!--  mouseControls: true,-->
+<!--  touchControls: true,-->
+<!--  gyroControls: false,-->
+<!--  minHeight: 200.00,-->
+<!--  minWidth: 200.00,-->
+<!--  scale: 1.00,-->
+<!--  scaleMobile: 1.00,-->
+<!--  backgroundColor: 0x0,-->
+<!--  color1: 0xf208f2,-->
+<!--  color2: 0x29f2e6,-->
+<!--  birdSize: 0.70,-->
+<!--  wingSpan: 14.00-->
+<!--})-->
+<!--</script>-->
 
   <!-- Typed.js and animation kick-off -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

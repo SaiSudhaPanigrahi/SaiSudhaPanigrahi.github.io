@@ -1,61 +1,139 @@
+//AOS.init();
+//
+////  Work experience cards
+//
+//const experiencecards = document.querySelector(".experience-cards");
+//const exp = [
+//  {
+//    title: "Software Development Intern",
+//    cardImage: "assets/images/experience-page/flipkart.jpg",
+//    place: "Flipkart",
+//    time: "(May, 2020 - present)",
+//    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+//  },
+//  {
+//    title: "Student Developer",
+//    cardImage: "assets/images/experience-page/gsoc.png",
+//    place: "Google Summer Of Code",
+//    time: "(Mar - Aug, 2019)",
+//    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+//  },
+//  {
+//    title: "Research Intern",
+//    cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
+//    place: "IIT, Bombay",
+//    time: "(Dec, 19 - Jan, 20)",
+//    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
+//  },
+//];
+//
+//const showCards2 = () => {
+//  let output = "";
+//  exp.forEach(
+//    ({ title, cardImage, place, time, desp }) =>
+//      (output += `
+//    <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400">
+//      <div class="card card1">
+//        <img src="${cardImage}" class="featured-image"/>
+//        <article class="card-body">
+//          <header>
+//            <div class="title">
+//              <h3>${title}</h3>
+//            </div>
+//            <p class="meta">
+//              <span class="pre-heading">${place}</span><br>
+//              <span class="author">${time}</span>
+//            </p>
+//            <ol>
+//              ${desp}
+//            </ol>
+//          </header>
+//        </article>
+//      </div>
+//    </div>
+//      `)
+//  );
+//  experiencecards.innerHTML = output;
+//};
+//document.addEventListener("DOMContentLoaded", showCards2);
+
 AOS.init();
 
 //  Work experience cards
-
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Software Development Intern",
-    cardImage: "assets/images/experience-page/flipkart.jpg",
-    place: "Flipkart",
-    time: "(May, 2020 - present)",
-    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+    title: "AI Engineer Intern",
+    cardImage: "assets/images/pasadena_digital.png",
+    place: "Pasadena Digital",
+    time: "(Jun 2024 – Present)",
+    desp: `
+      <li>Design and deploy computer vision, NLP, and LLM pipelines to enhance aviation safety.</li>
+      <li>Collaborate with cross-functional teams to integrate AI solutions into production systems.</li>
+    `
   },
   {
-    title: "Student Developer",
-    cardImage: "assets/images/experience-page/gsoc.png",
-    place: "Google Summer Of Code",
-    time: "(Mar - Aug, 2019)",
-    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+    title: "Software Engineer",
+    cardImage: "assets/images/arcesium.png",
+    place: "D.E. Shaw & Co. (Arcesium)",
+    time: "(Nov 2023 – Jun 2024)",
+    desp: `
+      <li>Built a Python/MySQL automation framework that boosted team efficiency by 40% and client satisfaction by 20%.</li>
+      <li>Authored API automation tests for complex financial systems, cutting manual QA hours by 25%.</li>
+      <li>Logged and triaged customer-facing bugs, gathered requirements from stakeholders, and refined system design.</li>
+    `
   },
   {
-    title: "Research Intern",
-    cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
-    place: "IIT, Bombay",
-    time: "(Dec, 19 - Jan, 20)",
-    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
+    title: "Full Stack Engineer",
+    cardImage: "assets/images/locad.png",
+    place: "LOCAD",
+    time: "(Apr 2022 – Aug 2023)",
+    desp: `
+      <li>Developed an order forecasting backend with FastAPI, ReactJS, and PostgreSQL, increasing warehouse efficiency by 50%.</li>
+      <li>Improved address-mapping accuracy by 20%, reducing return rates.</li>
+      <li>Integrated B2B APIs for 100+ brands and coordinated with cross-functional teams to ship new features.</li>
+    `
   },
+  {
+    title: "Site Reliability Engineer",
+    cardImage: "assets/images/oracle.png",
+    place: "Oracle",
+    time: "(Aug 2021 – Mar 2022)",
+    desp: `
+      <li>Automated cloud workflows using AWS, Docker, Kubernetes, and Chef—raising productivity by 30% and cutting manual tasks by 25%.</li>
+      <li>Built Bash/Python CLI tools to bulk-update network monitoring configurations, slashing operational time.</li>
+      <li>Wrote JavaScript transaction tests that emulate user flows to detect failures early.</li>
+    `
+  }
 ];
 
 const showCards2 = () => {
   let output = "";
   exp.forEach(
     ({ title, cardImage, place, time, desp }) =>
-      (output += `        
-    <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400"> 
-      <div class="card card1">
-        <img src="${cardImage}" class="featured-image"/>
-        <article class="card-body">
-          <header>
-            <div class="title">
-              <h3>${title}</h3>
-            </div>
-            <p class="meta">
-              <span class="pre-heading">${place}</span><br>
-              <span class="author">${time}</span>
-            </p>
-            <ol>
-              ${desp}
-            </ol>
-          </header>
-        </article>
-      </div>
-    </div>
+      (output += `
+        <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400">
+          <div class="card card1">
+            <img src="${cardImage}" class="featured-image"/>
+            <article class="card-body">
+              <header>
+                <div class="title"><h3>${title}</h3></div>
+                <p class="meta">
+                  <span class="pre-heading">${place}</span><br>
+                  <span class="author">${time}</span>
+                </p>
+                <ol>${desp}</ol>
+              </header>
+            </article>
+          </div>
+        </div>
       `)
   );
   experiencecards.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards2);
+
+// (leave your Volunteership and Hackathon code as-is)
 
 // Volunteership Cards
 
