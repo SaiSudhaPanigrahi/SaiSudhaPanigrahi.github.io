@@ -3,6 +3,11 @@
   src: url(../fonts/Agustina.woff);
 }
 
+/* ← FORCE VANTA BACKGROUND VISIBLE ON ALL PAGES */
+html, body {
+  background-color: transparent !important;
+  background-image:   none        !important;
+}
 
 /*CSS variable declaration for light/dark mode*/
 
@@ -98,14 +103,23 @@ html{
   scrollbar-width: auto;
 }
 
-body {
+/*body {
   height: 100vh;
   margin: 0;
   overflow-x: hidden;
   color: var(--text);
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
+}*/
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  background-color: transparent !important;
 }
+
 .text-center heading1 exp-head {
   color: white;
 }
@@ -1236,3 +1250,72 @@ outline: none;
   font-size: 0.9rem;
   text-align: center;
 }
+
+:root {
+  --accent: #00e6e6;
+  --navbar-height: 70px; /* adjust to your real navbar height */
+}
+
+.main-content {
+  margin-top: calc(var(--navbar-height) + 1rem); /* pushes under navbar */
+}
+h1, h2, h4 { color: var(--accent); }    /* accent color */
+/*
+body { background: #121212; color: #ddd; }
+*/
+.uni-logo { max-width: 80%; height: auto; margin-bottom:1rem; }
+
+.header-section {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.projectcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+ ─────────────────────────────────────────────────────
+   FORCE ALL WRAPPERS & BODY TO BE TRANSPARENT SO
+   #vanta-bg CAN PEEK THROUGH ON EVERY PAGE
+   ─────────────────────────────────────────────────────
+html, body,
+#vanta-bg,
+.main, .main1,
+.container, .page-content,
+.blog-slider, section, main {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+/* Default headings white */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+/* Accent spans in cyan */
+.accent {
+  color: var(--accent); /* #00e6e6 */
+}
+:root {
+  --accent: #00e6e6;
+}
+
+<style>
+  :root {
+    --accent: #00e6e6;
+  }
+  /* make the second word cyan */
+  .accent {
+    color: var(--accent);
+  }
+  /* spread out letters on main headings */
+  h1 {
+    letter-spacing: 0.1em;   /* tweak to taste */
+    color: #fff;             /* ensure the rest stays white */
+    margin-bottom: 1rem;     /* keep your existing spacing */
+  }
+</style>
+

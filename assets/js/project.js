@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Quizzito",
-    cardImage: "assets/images/project-page/quiz.jpeg",
+    cardImage: "assets/images/project-page/quiz.jpg",
     description:
       "Online quiz application using PHP/MySQL (XAMPP), HTML/CSS, managed via JIRA and Agile for full-stack Web dev education.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/1082/1082603.png", // quiz icon

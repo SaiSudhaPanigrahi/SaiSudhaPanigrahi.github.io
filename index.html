@@ -34,11 +34,15 @@
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="assets/images/favicon.png" type="image/x-png">
   <!-- Font awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <script defer src="./assets/js/dynamicTitle.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M11CMZ12Q"></script>
+  <script async
+          src="https://www.googletagmanager.com/gtag/js?id=G-M11CMZ12Q"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -48,56 +52,54 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <!-- NEW professional font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- Professional font pair -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+  <!-- Professional font pair -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
 
   <style>
-
     :root{
-  --accent: #00e6e6;   /* matches the animated-text color */
-}
+      --accent: #00e6e6;   /* matches the animated-text color */
+    }
 
-/* ===== Global font stack ===== */
-body{
-  font-family: 'Lato', 'Poppins', sans-serif;   /* body copy */
-  font-weight: 400;
-  line-height: 1.6;
-}
+    /* ===== Global font stack ===== */
+    body{
+      font-family: 'Lato', 'Poppins', sans-serif;   /* body copy */
+      font-weight: 400;
+      line-height: 1.6;
+    }
 
+    /* Headings & prominent text */
+    h1, h2, h3, h4,
+    .header, .skill-badge, .icon-label{
+      font-family: 'Montserrat', 'Lato', sans-serif;
+      font-weight: 600;
+      color: var(--accent);      /* NEW — cyan accent */
+    }
 
-/* Headings & prominent text */
-h1, h2, h3, h4,
-.header, .skill-badge, .icon-label{
-  font-family: 'Montserrat', 'Lato', sans-serif;
-  font-weight: 600;
-  color: var(--accent);      /* NEW — cyan accent */
-}
+    .skill-badge{
+      display:inline-block;
+      padding:6px 18px;
+      margin:6px;
+      font-size:0.9rem;
+      font-weight:500;
 
-.skill-badge{
-  display:inline-block;
-  padding:6px 18px;
-  margin:6px;
-  font-size:0.9rem;
-  font-weight:500;
+      background:var(--accent);     /* turquoise pill */
+      color:#000;                   /* ← white text */
 
-  background:var(--accent);     /* turquoise pill */
-  color:#000;                   /* ← white text */
+      border-radius:9999px;
+      box-shadow:0 2px 6px rgba(0,0,0,.2);
+      white-space:nowrap;
+      transition:transform .2s ease;
+    }
 
-  border-radius:9999px;
-  box-shadow:0 2px 6px rgba(0,0,0,.2);
-  white-space:nowrap;
-  transition:transform .2s ease;
-}
-
-.skill-badge:hover{
-  transform:translateY(-2px);
-}
-
-
-
+    .skill-badge:hover{
+      transform:translateY(-2px);
+    }
 
     .animated-text {
       font-family: 'Fira Code', monospace;
@@ -152,34 +154,37 @@ h1, h2, h3, h4,
       .social-button          { width: 45px; height: 45px; font-size: 18px; }
     }
 
-<!--    #home { position: relative; height: 100vh; overflow: hidden; }-->
-<!--    #vanta-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }-->
-
     #vanta-bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-/* allow #home to grow with content instead of locking at 100vh */
-#home {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
+    /* allow #home to grow with content instead of locking at 100vh */
+    #home {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
   </style>
 
-  <!-- Vanta.js dependencies -->
+  <!-- Vanta.js dependencies (only once) -->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>-->
+<!--  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+
+  <!-- Your shared init file -->
+  <script src="assets/js/vanta-init.js"></script>
+
 </head>
 
 <body class="no-scroll-preload">
 
-<div id="vanta-bg"></div>
+  <div id="vanta-bg"></div>
   <!-- loader -->
   <div class="loader-container">
     <div class="atom">
@@ -190,7 +195,6 @@ h1, h2, h3, h4,
   </div>
 
   <div id="home">
-<!--    <div id="vanta-bg"></div>-->
     <section class="center"></section>
   </div>
 
@@ -211,7 +215,6 @@ h1, h2, h3, h4,
         <span id="tagline" class="animated-text"></span>
 
         <div class="rounded-social-buttons mt-3">
-
           <!-- Resume -->
           <div class="icon-with-label">
             <a class="social-button resume" href="/path/to/your_resume.pdf" download title="Download Resume">
@@ -251,103 +254,90 @@ h1, h2, h3, h4,
             </a>
             <span class="icon-label">Email</span>
           </div>
-
         </div>
       </div>
     </div>
   </center>
 
-<section id="about" class="container mt-5 pt-5">
-  <div class="row align-items-center">
-    <div class="col-md-4 text-center mb-4 mb-md-0">
-      <img src="assets/images/usc_SSP.jpeg"
-           class="img-fluid rounded-circle"
-           alt="Sai Sudha Panigrahi" width="350" height="350">
+  <section id="about" class="container mt-5 pt-5">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img src="assets/images/usc_SSP.jpeg"
+             class="img-fluid rounded-circle"
+             alt="Sai Sudha Panigrahi" width="350" height="350">
+      </div>
+      <div class="col-md-8">
+        <h2 class="text-center text-md-left">About Me</h2>
+        <p class="lead mt-3">
+          I’m currently pursuing a Master of Science in Computer Science, focused on AI, at the University of Southern California. Alongside my studies, I work as an AI Engineer Intern at Pasadena Digital, where I design and deploy computer-vision, NLP, and LLM pipelines to enhance aviation safety.
+        </p>
+        <p class="lead">
+          Over the past three years, I’ve held full-time engineering roles at D.E. Shaw &amp; Co. (Arcesium), LOCAD, and Oracle. I specialize in designing scalable backend systems, AI-powered solutions, and intelligent automation tools. I enjoy building full-stack applications, leveraging cloud platforms, and integrating AI to transform concepts into reliable, impactful software—all while choosing the right technologies for performance, reliability, and maintainability.
+        </p>
+        <p class="lead">
+          My research has resulted in publications on differential-evolution parameter estimation for epidemiological models (Springer, Studies in Computational Intelligence) and deep-learning-based road-safety systems (IEEE). I’ve also contributed to Text-to-SQL translation and FAQ bot projects using NLP and deep learning, turning cutting-edge research into user-facing tools.
+        </p>
+        <p class="lead">
+          I’m seeking Fall ’25 co-op positions and full-time opportunities starting in 2026—if your team is tackling real-world challenges with code and creativity, let’s talk!
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="col-md-8">
-      <h2 class="text-center text-md-left">About Me</h2>
-
-      <p class="lead mt-3">
-        I’m currently pursuing a Master of Science in Computer Science, focused on AI, at the University of Southern California. Alongside my studies, I work as an AI Engineer Intern at Pasadena Digital, where I design and deploy computer-vision, NLP, and LLM pipelines to enhance aviation safety.
-      </p>
-
-      <p class="lead">
-        Over the past three years, I’ve held full-time engineering roles at D.E. Shaw &amp; Co. (Arcesium), LOCAD, and Oracle. I specialize in designing scalable backend systems, AI-powered solutions, and intelligent automation tools. I enjoy building full-stack applications, leveraging cloud platforms, and integrating AI to transform concepts into reliable, impactful software—all while choosing the right technologies for performance, reliability, and maintainability.
-      </p>
-
-      <p class="lead">
-        My research has resulted in publications on differential-evolution parameter estimation for epidemiological models (Springer, Studies in Computational Intelligence) and deep-learning-based road-safety systems (IEEE). I’ve also contributed to Text-to-SQL translation and FAQ bot projects using NLP and deep learning, turning cutting-edge research into user-facing tools.
-      </p>
-
-      <p class="lead">
-        I’m seeking Fall ’25 co-op positions and full-time opportunities starting in 2026—if your team is tackling real-world challenges with code and creativity, let’s talk!
-      </p>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="container mt-5 pt-3">
+    <h2 class="text-center mb-4">Skills</h2>
+    <!-- Languages & Frameworks -->
+    <h5 class="text-muted">Languages&nbsp;&amp;&nbsp;Frameworks</h5>
+    <div>
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">Java</span>
+      <span class="skill-badge">C/C++</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">SQL / NoSQL</span>
+      <span class="skill-badge">HTML &amp; CSS</span>
+      <span class="skill-badge">FastAPI</span>
+      <span class="skill-badge">Django</span>
+      <span class="skill-badge">ReactJS</span>
     </div>
-  </div>
-</section>
-
-
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="container mt-5 pt-3">
-  <h2 class="text-center mb-4">Skills</h2>
-
-  <!-- Languages & Frameworks -->
-  <h5 class="text-muted">Languages&nbsp;&amp;&nbsp;Frameworks</h5>
-  <div>
-    <span class="skill-badge">Python</span>
-    <span class="skill-badge">Java</span>
-    <span class="skill-badge">C/C++</span>
-    <span class="skill-badge">JavaScript</span>
-    <span class="skill-badge">SQL / NoSQL</span>
-    <span class="skill-badge">HTML &amp; CSS</span>
-    <span class="skill-badge">FastAPI</span>
-    <span class="skill-badge">Django</span>
-    <span class="skill-badge">ReactJS</span>
-  </div>
-
-  <!-- AI / ML -->
-  <h5 class="text-muted mt-3">AI&nbsp;/&nbsp;ML&nbsp;&amp;&nbsp;Data</h5>
-  <div>
-    <span class="skill-badge">TensorFlow</span>
-    <span class="skill-badge">PyTorch</span>
-    <span class="skill-badge">scikit-learn</span>
-    <span class="skill-badge">Pandas</span>
-    <span class="skill-badge">NumPy</span>
-    <span class="skill-badge">LLMs</span>
-    <span class="skill-badge">NLP</span>
-    <span class="skill-badge">Deep Learning</span>
-  </div>
-
-  <!-- DevOps & Cloud -->
-  <h5 class="text-muted mt-3">DevOps&nbsp;&amp;&nbsp;Cloud</h5>
-  <div>
-    <span class="skill-badge">AWS</span>
-    <span class="skill-badge">Docker</span>
-    <span class="skill-badge">Kubernetes</span>
-    <span class="skill-badge">Linux / Unix</span>
-    <span class="skill-badge">Bash / Shell</span>
-    <span class="skill-badge">CI/CD</span>
-    <span class="skill-badge">Git</span>
-    <span class="skill-badge">Microservices</span>
-  </div>
-
-  <!-- Tools & Methodologies -->
-  <h5 class="text-muted mt-3">Tools&nbsp;&amp;&nbsp;Methodologies</h5>
-  <div>
-    <span class="skill-badge">REST APIs</span>
-    <span class="skill-badge">Agile / Scrum</span>
-    <span class="skill-badge">JIRA</span>
-    <span class="skill-badge">Visual Studio</span>
-    <span class="skill-badge">Debugging</span>
-    <span class="skill-badge">Troubleshooting</span>
-    <span class="skill-badge">Statistics</span>
-    <span class="skill-badge">Mathematics</span>
-  </div>
-</section>
-<!-- ===== END SKILLS ===== -->
-
+    <!-- AI / ML -->
+    <h5 class="text-muted mt-3">AI&nbsp;/&nbsp;ML&nbsp;&amp;&nbsp;Data</h5>
+    <div>
+      <span class="skill-badge">TensorFlow</span>
+      <span class="skill-badge">PyTorch</span>
+      <span class="skill-badge">scikit-learn</span>
+      <span class="skill-badge">Pandas</span>
+      <span class="skill-badge">NumPy</span>
+      <span class="skill-badge">LLMs</span>
+      <span class="skill-badge">NLP</span>
+      <span class="skill-badge">Deep Learning</span>
+    </div>
+    <!-- DevOps & Cloud -->
+    <h5 class="text-muted mt-3">DevOps&nbsp;&amp;&nbsp;Cloud</h5>
+    <div>
+      <span class="skill-badge">AWS</span>
+      <span class="skill-badge">Docker</span>
+      <span class="skill-badge">Kubernetes</span>
+      <span class="skill-badge">Linux / Unix</span>
+      <span class="skill-badge">Bash / Shell</span>
+      <span class="skill-badge">CI/CD</span>
+      <span class="skill-badge">Git</span>
+      <span class="skill-badge">Microservices</span>
+    </div>
+    <!-- Tools & Methodologies -->
+    <h5 class="text-muted mt-3">Tools&nbsp;&amp;&nbsp;Methodologies</h5>
+    <div>
+      <span class="skill-badge">REST APIs</span>
+      <span class="skill-badge">Agile / Scrum</span>
+      <span class="skill-badge">JIRA</span>
+      <span class="skill-badge">Visual Studio</span>
+      <span class="skill-badge">Debugging</span>
+      <span class="skill-badge">Troubleshooting</span>
+      <span class="skill-badge">Statistics</span>
+      <span class="skill-badge">Mathematics</span>
+    </div>
+  </section>
+  <!-- ===== END SKILLS ===== -->
 
   <br><br><br>
 
@@ -357,7 +347,6 @@ h1, h2, h3, h4,
           crossorigin="anonymous"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6D61F5TL4"></script>
-
   <script src="assets/js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
           integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -367,43 +356,6 @@ h1, h2, h3, h4,
           crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
   <script src="assets/js/particle.js"></script>
-
-  <script>
-    VANTA.NET({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x9d214a,
-      backgroundColor: 0x1b102f,
-      points: 9.00,
-      maxDistance: 22.00,
-      spacing: 14.00,
-      speed: 10.0
-    });
-
-<!--<script src="vanta.birds.min.js"></script>-->
-<!--<script>-->
-<!--VANTA.BIRDS({-->
-<!--  el: "#your-element-selector",-->
-<!--  mouseControls: true,-->
-<!--  touchControls: true,-->
-<!--  gyroControls: false,-->
-<!--  minHeight: 200.00,-->
-<!--  minWidth: 200.00,-->
-<!--  scale: 1.00,-->
-<!--  scaleMobile: 1.00,-->
-<!--  backgroundColor: 0x0,-->
-<!--  color1: 0xf208f2,-->
-<!--  color2: 0x29f2e6,-->
-<!--  birdSize: 0.70,-->
-<!--  wingSpan: 14.00-->
-<!--})-->
-<!--</script>-->
 
   <!-- Typed.js and animation kick-off -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
