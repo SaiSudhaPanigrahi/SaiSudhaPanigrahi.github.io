@@ -19,7 +19,7 @@
   <!-- Your CSS -->
   <link rel="stylesheet" href="assets/css/home.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="stylesheet" href="assets/css/cursor.css"/>
+<!--  <link rel="stylesheet" href="assets/css/cursor.css"/>-->
 
   <style>
     :root {
@@ -34,11 +34,12 @@
     }
 
     /* Headings & prominent text */
-    h1, h2, h3, h4,
+    h1, h2, h3, h4, h5
     .header, .skill-badge, .icon-label {
       font-family: 'Montserrat', 'Lato', sans-serif;
       font-weight: 600;
       color: var(--accent);
+      letter-spacing: 0.1em;
     }
     .skill-badge {
       display: inline-block;
@@ -110,6 +111,37 @@
     }
   </style>
 
+  <style>
+  /* Pink badges for soft skills */
+  .skill-badge.soft-skill {
+    background: #ff99cc;
+    color: #000;
+  }
+
+    /* make only the skills header text white, letting .accent remain cyan */
+section#skills h2 {
+  color: #fff;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+</style>
+
+  <style>
+  /* Make skill headings bold */
+  #skills h5 {
+    font-weight: 700 !important;
+  }
+
+    /* after your existing styles */
+#skills h5.text-muted {
+  color: var(--accent) !important;
+}
+
+</style>
+
+
+
   <!-- Three.js & Vanta.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
@@ -150,31 +182,31 @@
 
         <div class="rounded-social-buttons mt-3">
           <div class="icon-with-label">
-            <a class="social-button resume" href="/path/to/your_resume.pdf" download title="Download Resume">
+            <a class="social-button resume" href="assets/docs/Resume_SaiSudhaPanigrahi_3YOE.pdf" download title="Download Resume">
               <i class="fas fa-file-alt"></i>
             </a>
             <span class="icon-label">Resume</span>
           </div>
           <div class="icon-with-label">
-            <a class="social-button github" href="https://github.com/YourUsername" target="_blank">
+            <a class="social-button github" href="https://github.com/SaiSudhaPanigrahi" target="_blank">
               <i class="fab fa-github"></i>
             </a>
             <span class="icon-label">GitHub</span>
           </div>
           <div class="icon-with-label">
-            <a class="social-button linkedin" href="https://linkedin.com/in/YourUsername" target="_blank">
+            <a class="social-button linkedin" href="https://www.linkedin.com/in/sai-sudha-panigrahi" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"/>
             </a>
             <span class="icon-label">LinkedIn</span>
           </div>
           <div class="icon-with-label">
-            <a class="social-button leetcode" href="https://leetcode.com/YourUsername/" target="_blank">
+            <a class="social-button leetcode" href="https://leetcode.com/u/saisudha755/" target="_blank">
               <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode"/>
             </a>
             <span class="icon-label">LeetCode</span>
           </div>
           <div class="icon-with-label">
-            <a class="social-button gmail" href="mailto:your.email@gmail.com" title="Email Me">
+            <a class="social-button gmail" href="mailto:saisudha@usc.edu" title="Email Me">
               <i class="fas fa-envelope"></i>
             </a>
             <span class="icon-label">Email</span>
@@ -197,76 +229,97 @@
         />
       </div>
       <div class="col-md-8">
-        <h2 data-aos="fade-right">About Me</h2>
+        <h2 class="text-center mb-4" data-aos="fade-right" style="color:#fff; /* override to white */">ABOUT <span class="accent">ME</span></h2>
         <p class="lead mt-3" data-aos="fade-up">
-          I’m currently pursuing a Master of Science in Computer Science, focused on AI, at USC…
+I’m currently pursuing a Master of Science in Computer Science, focused on AI at the University of Southern California. Alongside my studies, I’m working as an AI Engineer Intern at Pasadena Digital, designing and deploying computer-vision, NLP, and LLM pipelines to enhance aviation safety.         </p>
+        <p class="lead">
+          Over the past 3 years, I’ve held full-time engineering roles at leading technology firms- ORACLE, Arcesium (D.E. SHAW & Co.), Locad (E-commerce startup),  I specialize in designing scalable backend systems and AI-powered solutions. I enjoy crafting full-stack applications using cloud platforms and AI to build impactful software. This breadth of experience has sharpened my ability to select the right technologies for performance, reliability, and maintainability.
         </p>
         <p class="lead">
-          Over the past three years, I’ve held full-time engineering roles at D.E. Shaw &amp; Co. (Arcesium), LOCAD, and Oracle. I specialize in designing scalable backend systems, AI-powered solutions, and intelligent automation tools. I enjoy building full-stack applications, leveraging cloud platforms, and integrating AI to transform concepts into reliable, impactful software—all while choosing the right technologies for performance, reliability, and maintainability.
+My research has led to publications on differential-evolution for epidemiological models (Springer Book Series, Studies in Computational Intelligence) and deep-learning-based road-safety systems (IEEE), My work spans open-source projects and industry deployments in NLP, AI chatbots, Full stack applications. These experiences reflect my drive to translate cutting-edge research into robust, user-facing tools.
         </p>
         <p class="lead">
-          My research has resulted in publications on differential-evolution parameter estimation for epidemiological models (Springer, Studies in Computational Intelligence) and deep-learning-based road-safety systems (IEEE). I’ve also contributed to Text-to-SQL translation and FAQ bot projects using NLP and deep learning, turning cutting-edge research into user-facing tools.
-        </p>
-        <p class="lead">
-          I’m seeking Fall ’25 co-op positions and full-time opportunities starting in 2026—if your team is tackling real-world challenges with code and creativity, let’s talk!
-        </p>
+I'm now actively seeking Full-time opportunities starting in May 2026 and Fall ’25 co-op positions. If your team is tackling real-world problems with code and creativity, let’s talk!  </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
-  <section id="skills" class="container mt-5 pt-3">
-    <h2 class="text-center mb-4">Skills</h2>
-    <!-- Languages & Frameworks -->
-    <h5 class="text-muted">Languages&nbsp;&amp;&nbsp;Frameworks</h5>
-    <div>
-      <span class="skill-badge">Python</span>
-      <span class="skill-badge">Java</span>
-      <span class="skill-badge">C/C++</span>
-      <span class="skill-badge">JavaScript</span>
-      <span class="skill-badge">SQL / NoSQL</span>
-      <span class="skill-badge">HTML &amp; CSS</span>
-      <span class="skill-badge">FastAPI</span>
-      <span class="skill-badge">Django</span>
-      <span class="skill-badge">ReactJS</span>
-    </div>
-    <!-- AI / ML -->
-    <h5 class="text-muted mt-3">AI&nbsp;/&nbsp;ML&nbsp;&amp;&nbsp;Data</h5>
-    <div>
-      <span class="skill-badge">TensorFlow</span>
-      <span class="skill-badge">PyTorch</span>
-      <span class="skill-badge">scikit-learn</span>
-      <span class="skill-badge">Pandas</span>
-      <span class="skill-badge">NumPy</span>
-      <span class="skill-badge">LLMs</span>
-      <span class="skill-badge">NLP</span>
-      <span class="skill-badge">Deep Learning</span>
-    </div>
-    <!-- DevOps & Cloud -->
-    <h5 class="text-muted mt-3">DevOps&nbsp;&amp;&nbsp;Cloud</h5>
-    <div>
-      <span class="skill-badge">AWS</span>
-      <span class="skill-badge">Docker</span>
-      <span class="skill-badge">Kubernetes</span>
-      <span class="skill-badge">Linux / Unix</span>
-      <span class="skill-badge">Bash / Shell</span>
-      <span class="skill-badge">CI/CD</span>
-      <span class="skill-badge">Git</span>
-      <span class="skill-badge">Microservices</span>
-    </div>
-    <!-- Tools & Methodologies -->
-    <h5 class="text-muted mt-3">Tools&nbsp;&amp;&nbsp;Methodologies</h5>
-    <div>
-      <span class="skill-badge">REST APIs</span>
-      <span class="skill-badge">Agile / Scrum</span>
-      <span class="skill-badge">JIRA</span>
-      <span class="skill-badge">Visual Studio</span>
-      <span class="skill-badge">Debugging</span>
-      <span class="skill-badge">Troubleshooting</span>
-      <span class="skill-badge">Statistics</span>
-      <span class="skill-badge">Mathematics</span>
-    </div>
-  </section>
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="container mt-5 pt-3">
+  <h2 class="text-center mb-4" data-aos="fade-right" style="color:#fff; /* override to white */">MY <span class="accent">SKILLS</span></h2>
+  <!-- Frameworks -->
+  <h5 class="text-muted">Frameworks&nbsp;&amp;&nbsp;Tools</h5>
+  <div>
+    <span class="skill-badge">Python</span>
+    <span class="skill-badge">Java</span>
+    <span class="skill-badge">C/C++</span>
+    <span class="skill-badge">JavaScript</span>
+    <span class="skill-badge">HTML/CSS</span>
+    <span class="skill-badge">SQL/NoSQL</span>
+    <span class="skill-badge">Backend Web Development</span>
+    <span class="skill-badge">Full-stack</span>
+    <span class="skill-badge">Cloud Computing</span>
+    <span class="skill-badge">Microsoft Office</span>
+    <span class="skill-badge">Debugging</span>
+    <span class="skill-badge">Troubleshooting</span>
+  </div>
+
+<!--  &lt;!&ndash; Backend & Full-stack &ndash;&gt;-->
+<!--  <h5 class="text-muted mt-3">Backend&nbsp;&amp;&nbsp;Full-stack</h5>-->
+<!--  <div>-->
+<!--    -->
+<!--  </div>-->
+
+  <!-- AI / ML & Data -->
+  <h5 class="text-muted mt-3">AI&nbsp;/&nbsp;ML&nbsp;&amp;&nbsp;Data</h5>
+  <div>
+    <span class="skill-badge">Machine Learning</span>
+    <span class="skill-badge">AI</span>
+    <span class="skill-badge">TensorFlow</span>
+    <span class="skill-badge">PyTorch</span>
+    <span class="skill-badge">scikit-learn</span>
+    <span class="skill-badge">Pandas</span>
+    <span class="skill-badge">NumPy</span>
+    <span class="skill-badge">NLP</span>
+    <span class="skill-badge">Deep Learning</span>
+    <span class="skill-badge">LLMs</span>
+    <span class="skill-badge">Statistics</span>
+    <span class="skill-badge">Mathematics</span>
+  </div>
+
+  <!-- DevOps & Cloud -->
+  <h5 class="text-muted mt-3">DevOps&nbsp;&amp;&nbsp;Cloud</h5>
+  <div>
+    <span class="skill-badge">AWS</span>
+    <span class="skill-badge">Docker</span>
+    <span class="skill-badge">Kubernetes</span>
+    <span class="skill-badge">Linux/Unix</span>
+    <span class="skill-badge">Bash</span>
+    <span class="skill-badge">CI/CD</span>
+    <span class="skill-badge">Git</span>
+    <span class="skill-badge">Agile methodology</span>
+    <span class="skill-badge">REST APIs</span>
+    <span class="skill-badge">Microservices</span>
+    <span class="skill-badge">JIRA</span>
+    <span class="skill-badge">Visual Studio</span>
+  </div>
+
+<!--  &lt;!&ndash; Tools & Methodologies &ndash;&gt;-->
+<!--  <h5 class="text-muted mt-3">Tools&nbsp;&amp;&nbsp;Methodologies</h5>-->
+<!--  <div>-->
+
+<!--  </div>-->
+
+  <!-- Soft Skills -->
+  <h5 class="text-muted mt-4">Soft&nbsp;Skills</h5>
+  <div>
+    <span class="skill-badge soft-skill">Team work</span>
+    <span class="skill-badge soft-skill">Verbal &amp; Written Communication</span>
+    <span class="skill-badge soft-skill">Problem Solving</span>
+    <span class="skill-badge soft-skill">Cross-functional Collaboration</span>
+  </div>
+</section>
+
 
   <br><br><br>
 
@@ -305,9 +358,9 @@
   <!-- Vanta init -->
   <script src="assets/js/vanta-init.js"></script>
 
-  <!-- cursors -->
-  <div class="cursor-dot-outline"></div>
-  <div class="cursor-dot"></div>
-  <script src="assets/js/cursor.js"></script>
+<!--  &lt;!&ndash; cursors &ndash;&gt;-->
+<!--  <div class="cursor-dot-outline"></div>-->
+<!--  <div class="cursor-dot"></div>-->
+<!--  <script src="assets/js/cursor.js"></script>-->
 </body>
 </html>
